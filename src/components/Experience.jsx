@@ -18,47 +18,68 @@ export default function Experience() {
       </div>
 
       <div className="experience-timeline">
-        {workExperience.map((job, idx) => (
-          <div key={idx} className="timeline-item">
-            <div className="timeline-date-col">
-              <span className="timeline-date">{job.period}</span>
-              {job.isCurrent && (
-                <span className="role-badge-current">Current role</span>
-              )}
-            </div>
-
-            <article className="timeline-body">
-              <h3>{job.role}</h3>
-              <p className="timeline-organization">
-                <strong>{job.company}</strong>
-                <span>·</span>
-                <span>{job.location}</span>
-              </p>
-
-              <p className="timeline-summary">{job.summary}</p>
-
-              <div className="tags-list" aria-label="Technologies used">
-                {job.technologies.map((tech) => (
-                  <span key={tech} className="tag-pill">
-                    {tech}
-                  </span>
-                ))}
+        {workExperience.map((job, idx) => {
+          const isLast = idx === workExperience.length - 1;
+          return (
+            <div key={idx} className="timeline-item">
+              <div className="timeline-date-col">
+                <span className="timeline-date">{job.period}</span>
+                {job.isCurrent && (
+                  <span className="role-badge-current">Current role</span>
+                )}
               </div>
 
-              <details className="disclosure-block">
-                <summary className="disclosure-summary">
-                  <span>Work & responsibilities</span>
-                  <ChevronDown size={16} className="disclosure-chevron" />
-                </summary>
-                <ul className="disclosure-details">
-                  {job.responsibilities.map((resp, rIdx) => (
-                    <li key={rIdx}>{resp}</li>
+              <div className="timeline-spine" aria-hidden="true">
+                <div className={`timeline-node ${job.isCurrent ? 'current' : ''}`}>
+                  <div className="timeline-node-inner" />
+                </div>
+                {!isLast ? (
+                  <div className="timeline-track-line" />
+                ) : (
+                  <div className="timeline-track-line-end" />
+                )}
+              </div>
+
+              <article className="timeline-body">
+                <div className="timeline-mobile-date">
+                  <span className="timeline-date">{job.period}</span>
+                  {job.isCurrent && (
+                    <span className="role-badge-current">Current role</span>
+                  )}
+                </div>
+
+                <h3>{job.role}</h3>
+                <p className="timeline-organization">
+                  <strong>{job.company}</strong>
+                  <span>·</span>
+                  <span>{job.location}</span>
+                </p>
+
+                <p className="timeline-summary">{job.summary}</p>
+
+                <div className="tags-list" aria-label="Technologies used">
+                  {job.technologies.map((tech) => (
+                    <span key={tech} className="tag-pill">
+                      {tech}
+                    </span>
                   ))}
-                </ul>
-              </details>
-            </article>
-          </div>
-        ))}
+                </div>
+
+                <details className="disclosure-block">
+                  <summary className="disclosure-summary">
+                    <span>Work & responsibilities</span>
+                    <ChevronDown size={16} className="disclosure-chevron" />
+                  </summary>
+                  <ul className="disclosure-details">
+                    {job.responsibilities.map((resp, rIdx) => (
+                      <li key={rIdx}>{resp}</li>
+                    ))}
+                  </ul>
+                </details>
+              </article>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
