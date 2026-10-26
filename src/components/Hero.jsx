@@ -8,7 +8,7 @@ export default function Hero({ onNavigateToResume }) {
     <section id="top" className="hero-section">
       <div className="hero-portrait-lens" aria-hidden="true">
         <img
-          src="/portrait.jpg"
+          src="/potrait.jpg"
           alt="Nikhil Kajota portrait"
           className="hero-portrait-img"
         />
