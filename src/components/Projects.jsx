@@ -85,16 +85,33 @@ export default function Projects({ onOpenCaseStudy }) {
                     Inspect architecture
                   </button>
 
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="action-link"
-                  >
-                    <GithubIcon size={15} />
-                    GitHub
-                    <ArrowUpRight size={14} />
-                  </a>
+                  {project.repositories && project.repositories.length > 0 ? (
+                    project.repositories.map((repo) => (
+                      <a
+                        key={repo.url}
+                        href={repo.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="action-link"
+                        title={`${repo.label} Repository on GitHub`}
+                      >
+                        <GithubIcon size={15} />
+                        {repo.label}
+                        <ArrowUpRight size={14} />
+                      </a>
+                    ))
+                  ) : (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-link"
+                    >
+                      <GithubIcon size={15} />
+                      GitHub
+                      <ArrowUpRight size={14} />
+                    </a>
+                  )}
                 </div>
               </div>
 

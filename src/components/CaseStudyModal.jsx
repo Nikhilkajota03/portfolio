@@ -62,18 +62,35 @@ export default function CaseStudyModal({ project, onClose }) {
           ))}
         </div>
 
-        <div style={{ marginTop: '32px', display: 'flex', gap: '16px', alignItems: 'center' }}>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            style={{ fontSize: '13px' }}
-          >
-            <GithubIcon size={15} />
-            <span>View code on GitHub</span>
-            <ArrowUpRight size={14} />
-          </a>
+        <div style={{ marginTop: '32px', display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+          {project.repositories && project.repositories.length > 0 ? (
+            project.repositories.map((repo) => (
+              <a
+                key={repo.url}
+                href={repo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+                style={{ fontSize: '13px' }}
+              >
+                <GithubIcon size={15} />
+                <span>{repo.label} code</span>
+                <ArrowUpRight size={14} />
+              </a>
+            ))
+          ) : (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{ fontSize: '13px' }}
+            >
+              <GithubIcon size={15} />
+              <span>View code on GitHub</span>
+              <ArrowUpRight size={14} />
+            </a>
+          )}
 
           <button
             type="button"

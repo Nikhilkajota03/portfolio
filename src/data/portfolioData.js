@@ -126,7 +126,11 @@ export const selectedProjects = [
       context: "Automated benchmarked precision on messy tabular datasets with zero unintended schema mutations."
     },
     technologies: ["LangGraph", "FastMCP", "sqlglot", "LangSmith", "PostgreSQL", "Python"],
-    githubUrl: "https://github.com/Nikhilkajota03",
+    githubUrl: "https://github.com/Nikhilkajota03/data_cleaner_ai_agent_backend",
+    repositories: [
+      { label: "Backend", url: "https://github.com/Nikhilkajota03/data_cleaner_ai_agent_backend" },
+      { label: "Frontend", url: "https://github.com/Nikhilkajota03/data_cleaner_ai_agent_frontend" }
+    ],
     statusText: "Production Architecture · Open Design",
     artwork: {
       type: "control",
