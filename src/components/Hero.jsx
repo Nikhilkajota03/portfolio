@@ -16,19 +16,21 @@ export default function Hero({ onNavigateToResume }) {
       </div>
 
       <div className="hero-content container">
-        <div className="hero-role">
-          <span className="hero-role-dot" aria-hidden="true"></span>
-          {personalInfo.role}
-        </div>
+        <div className="hero-identity">
+          <div className="hero-role">
+            <span className="hero-role-dot" aria-hidden="true"></span>
+            {personalInfo.role}
+          </div>
 
-        <h1 className="hero-name">
-          <span>Nikhil </span>
-          <span>Kajota<span className="hero-period">.</span></span>
-        </h1>
+          <h1 className="hero-name">
+            <span>Nikhil </span>
+            <span>Kajota<span className="hero-period">.</span></span>
+          </h1>
 
-        <div className="hero-statement">
-          <h2>{personalInfo.statementTitle}</h2>
-          <p>{personalInfo.statementDesc}</p>
+          <div className="hero-statement">
+            <h2>{personalInfo.statementTitle}</h2>
+            <p>{personalInfo.statementDesc}</p>
+          </div>
         </div>
 
         <div className="hero-bottom">
