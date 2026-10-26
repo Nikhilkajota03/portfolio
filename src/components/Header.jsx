@@ -51,6 +51,12 @@ export default function Header({ currentPage, onNavigateToResume, onNavigateToPo
               >
                 Work
               </a>
+              <a
+                href="#skills"
+                onClick={() => handleNavClick('skills')}
+              >
+                Systems
+              </a>
               <button
                 type="button"
                 onClick={onNavigateToResume}
@@ -58,12 +64,6 @@ export default function Header({ currentPage, onNavigateToResume, onNavigateToPo
               >
                 Resume
               </button>
-              <a
-                href="#skills"
-                onClick={() => handleNavClick('skills')}
-              >
-                Systems
-              </a>
             </nav>
 
             <a
@@ -126,6 +126,17 @@ export default function Header({ currentPage, onNavigateToResume, onNavigateToPo
               <span>02. Selected Work</span>
               <ArrowUpRight size={22} />
             </a>
+            <a
+              href="#skills"
+              className="mobile-menu-link"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                handleNavClick('skills');
+              }}
+            >
+              <span>03. Systems & Stack</span>
+              <ArrowUpRight size={22} />
+            </a>
             <button
               type="button"
               className="mobile-menu-link"
@@ -135,20 +146,9 @@ export default function Header({ currentPage, onNavigateToResume, onNavigateToPo
                 onNavigateToResume();
               }}
             >
-              <span>03. Résumé</span>
+              <span>04. Résumé</span>
               <ArrowUpRight size={22} />
             </button>
-            <a
-              href="#skills"
-              className="mobile-menu-link"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                handleNavClick('skills');
-              }}
-            >
-              <span>04. Systems & Stack</span>
-              <ArrowUpRight size={22} />
-            </a>
             <a
               href="#contact"
               className="mobile-menu-link"
