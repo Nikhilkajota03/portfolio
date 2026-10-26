@@ -15,7 +15,7 @@ export default function Hero({ onNavigateToResume }) {
         <div className="hero-portrait-shade"></div>
       </div>
 
-      <div className="hero-content container">
+      <div className="hero-content hero-fluid-container">
         <div className="hero-identity">
           <div className="hero-role">
             <span className="hero-role-dot" aria-hidden="true"></span>

@@ -23,7 +23,7 @@ export default function Header({ currentPage, onNavigateToResume, onNavigateToPo
   return (
     <>
       <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
-        <div className="header-inner container">
+        <div className="header-inner header-fluid-container">
           <a
             href="/"
             onClick={(e) => {

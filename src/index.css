@@ -79,9 +79,23 @@ ul, ol {
   padding: 0 32px;
 }
 
+.hero-fluid-container,
+.header-fluid-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: clamp(24px, 4.5vw, 72px);
+  padding-right: clamp(24px, 4.5vw, 72px);
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
+  }
+  .hero-fluid-container,
+  .header-fluid-container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
