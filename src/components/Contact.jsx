@@ -27,7 +27,7 @@ export default function Contact() {
     <section id="contact" className="section container">
       <div className="section-heading">
         <div className="eyebrow">
-          <span aria-hidden="true">07</span>
+          <span aria-hidden="true">05</span>
           <span className="eyebrow-line" aria-hidden="true"></span>
           Contact
         </div>

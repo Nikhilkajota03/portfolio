@@ -7,7 +7,7 @@ export default function Experience() {
     <section id="experience" className="section container">
       <div className="section-heading">
         <div className="eyebrow">
-          <span aria-hidden="true">03</span>
+          <span aria-hidden="true">02</span>
           <span className="eyebrow-line" aria-hidden="true"></span>
           Experience
         </div>

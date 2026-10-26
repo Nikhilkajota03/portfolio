@@ -8,7 +8,7 @@ export default function Projects({ onOpenCaseStudy }) {
     <section id="work" className="section container">
       <div className="section-heading">
         <div className="eyebrow">
-          <span aria-hidden="true">04</span>
+          <span aria-hidden="true">03</span>
           <span className="eyebrow-line" aria-hidden="true"></span>
           Selected projects
         </div>

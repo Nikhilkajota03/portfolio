@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HeroPaths from './components/HeroPaths';
-import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import PublicCode from './components/PublicCode';
 import SkillsMatrix from './components/SkillsMatrix';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -20,10 +18,8 @@ export default function App() {
       <main id="main">
         <Hero />
         <HeroPaths />
-        <About />
         <Experience />
         <Projects onOpenCaseStudy={(proj) => setActiveModalProject(proj)} />
-        <PublicCode />
         <SkillsMatrix />
         <Contact />
       </main>

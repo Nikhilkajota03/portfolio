@@ -25,10 +25,8 @@ export default function Header() {
 
           <div className="header-actions">
             <nav className="header-nav" aria-label="Featured destinations">
-              <a href="#about">About</a>
               <a href="#experience">Experience</a>
               <a href="#work">Work</a>
-              <a href="#experiments">Open source</a>
               <a href="#skills">Systems</a>
             </nav>
 
@@ -67,19 +65,11 @@ export default function Header() {
 
           <nav className="mobile-menu-links">
             <a
-              href="#about"
-              className="mobile-menu-link"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span>01. About</span>
-              <ArrowUpRight size={22} />
-            </a>
-            <a
               href="#experience"
               className="mobile-menu-link"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span>02. Experience</span>
+              <span>01. Experience</span>
               <ArrowUpRight size={22} />
             </a>
             <a
@@ -87,15 +77,7 @@ export default function Header() {
               className="mobile-menu-link"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span>03. Selected Work</span>
-              <ArrowUpRight size={22} />
-            </a>
-            <a
-              href="#experiments"
-              className="mobile-menu-link"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span>04. Open Source</span>
+              <span>02. Selected Work</span>
               <ArrowUpRight size={22} />
             </a>
             <a
@@ -103,7 +85,7 @@ export default function Header() {
               className="mobile-menu-link"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span>05. Systems</span>
+              <span>03. Systems & Stack</span>
               <ArrowUpRight size={22} />
             </a>
             <a
@@ -111,7 +93,7 @@ export default function Header() {
               className="mobile-menu-link"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span>06. Contact</span>
+              <span>04. Contact</span>
               <ArrowUpRight size={22} />
             </a>
           </nav>

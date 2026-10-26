@@ -6,7 +6,7 @@ export default function SkillsMatrix() {
     <section id="skills" className="section container">
       <div className="section-heading">
         <div className="eyebrow">
-          <span aria-hidden="true">06</span>
+          <span aria-hidden="true">04</span>
           <span className="eyebrow-line" aria-hidden="true"></span>
           Systems & Technologies
         </div>
