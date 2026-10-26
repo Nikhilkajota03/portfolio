@@ -731,12 +731,7 @@ ul, ol {
 .timeline-item {
   display: grid;
   grid-template-columns: 240px 48px 1fr;
-  padding-bottom: 72px;
   position: relative;
-}
-
-.timeline-item:last-child {
-  padding-bottom: 24px;
 }
 
 .timeline-mobile-date {
@@ -747,7 +742,6 @@ ul, ol {
   .timeline-item {
     grid-template-columns: 32px 1fr;
     gap: 16px;
-    padding-bottom: 56px;
   }
   .timeline-date-col {
     display: none;
@@ -779,13 +773,14 @@ ul, ol {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .timeline-node {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: var(--bg-primary);
+  background-color: #090909;
   border: 2px solid var(--border-bright);
   z-index: 2;
   margin-top: 6px;
@@ -815,29 +810,41 @@ ul, ol {
 
 .timeline-track-line {
   position: absolute;
-  top: 18px;
+  top: 14px;
   bottom: 0;
   width: 2px;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(
     to bottom,
-    rgba(16, 185, 129, 0.8) 0%,
-    var(--border-medium) 35%,
-    var(--border-medium) 100%
+    rgba(16, 185, 129, 0.9) 0%,
+    rgba(255, 255, 255, 0.22) 30%,
+    rgba(255, 255, 255, 0.18) 100%
   );
   z-index: 1;
 }
 
 .timeline-track-line-end {
   position: absolute;
-  top: 18px;
-  height: 120px;
+  top: 0;
+  height: 90px;
   width: 2px;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(
     to bottom,
-    var(--border-medium) 0%,
+    rgba(255, 255, 255, 0.18) 0%,
     transparent 100%
   );
   z-index: 1;
+}
+
+.timeline-body {
+  padding-bottom: 72px;
+}
+
+.timeline-item:last-child .timeline-body {
+  padding-bottom: 24px;
 }
 
 .role-badge-current {
