@@ -3,7 +3,7 @@ import { ArrowDownRight, ArrowUpRight, Mail } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
 
-export default function Hero() {
+export default function Hero({ onNavigateToResume }) {
   return (
     <section id="top" className="hero-section">
       <div className="hero-portrait-lens" aria-hidden="true">
@@ -38,15 +38,14 @@ export default function Hero() {
               <ArrowDownRight size={18} />
             </a>
 
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={onNavigateToResume}
               className="btn-secondary"
             >
               <span>View résumé</span>
               <ArrowUpRight size={16} />
-            </a>
+            </button>
           </div>
 
           <div className="hero-personal">

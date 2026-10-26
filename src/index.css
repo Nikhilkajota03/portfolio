@@ -1694,3 +1694,112 @@ details[open] .disclosure-chevron {
 .footer-links a:hover {
   color: var(--text-primary);
 }
+
+/* -------------------------------------------------------------------------- */
+/* Dedicated Resume Page & Header Tab                                         */
+/* -------------------------------------------------------------------------- */
+
+.header-nav-btn {
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-nav-btn:hover,
+.header-nav-btn.active {
+  color: var(--text-primary);
+}
+
+.resume-page-container {
+  padding-top: 130px;
+  padding-bottom: 96px;
+  min-height: 85vh;
+}
+
+.resume-back-bar {
+  margin-bottom: 40px;
+}
+
+.resume-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.resume-back-btn:hover {
+  color: var(--text-primary);
+  transform: translateX(-3px);
+}
+
+.resume-header-block {
+  margin-bottom: 36px;
+}
+
+.resume-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.resume-title {
+  font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.resume-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.resume-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.resume-helper-note {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.resume-viewer-frame {
+  width: 100%;
+  height: 960px;
+  border-radius: 12px;
+  border: 1px solid var(--border-medium);
+  background-color: #1c1c1c;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .resume-viewer-frame {
+    height: 650px;
+  }
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #323639;
+}
+
