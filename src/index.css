@@ -959,48 +959,33 @@ ul, ol {
   color: var(--text-secondary);
 }
 
-.disclosure-block {
-  margin-top: 16px;
+.responsibilities-block {
+  margin-top: 20px;
   border-top: 1px solid var(--border-subtle);
-  padding-top: 16px;
+  padding-top: 18px;
 }
 
-.disclosure-summary {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-primary);
-  cursor: pointer;
-  user-select: none;
+.responsibilities-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
 }
 
-.disclosure-summary::-webkit-details-marker {
-  display: none;
-}
-
-.disclosure-chevron {
-  transition: transform var(--transition-fast);
-}
-
-details[open] .disclosure-chevron {
-  transform: rotate(180deg);
-}
-
-.disclosure-details {
-  margin-top: 16px;
+.responsibilities-list {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.disclosure-details li {
+.responsibilities-list li {
   list-style: disc;
   color: var(--text-secondary);
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* -------------------------------------------------------------------------- */

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
 import { workExperience } from '../data/portfolioData';
 
 export default function Experience() {
@@ -65,17 +64,14 @@ export default function Experience() {
                   ))}
                 </div>
 
-                <details className="disclosure-block">
-                  <summary className="disclosure-summary">
-                    <span>Work & responsibilities</span>
-                    <ChevronDown size={16} className="disclosure-chevron" />
-                  </summary>
-                  <ul className="disclosure-details">
+                <div className="responsibilities-block">
+                  <p className="responsibilities-title">Work & responsibilities</p>
+                  <ul className="responsibilities-list">
                     {job.responsibilities.map((resp, rIdx) => (
                       <li key={rIdx}>{resp}</li>
                     ))}
                   </ul>
-                </details>
+                </div>
               </article>
             </div>
           );
